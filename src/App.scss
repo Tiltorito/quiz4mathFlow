@@ -1,3 +1,14 @@
+@import "~bulma/sass/utilities/_all.sass";
+
+@import "~bulma/sass/base/minireset.sass";
+@import "~bulma/sass/base/helpers.sass";
+
+@import "~bulma/sass/grid/_all";
+@import "~bulma/sass/elements/container";
+@import "~bulma/sass/layout/section";
+@import "../node_modules/material-components-web/dist/material-components-web.min.css";
+
+
 .App {
   text-align: center;
 }

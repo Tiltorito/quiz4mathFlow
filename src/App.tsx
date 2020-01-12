@@ -1,25 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import FirstComponent from './components/FirstComponent/FirstComponent';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import ViewQuestions from './components/ViewQuestions/ViewQuestions';
+import QuestionService from './services/QuestionService/QuestionService';
+import DummyQuestionService from './services/QuestionService/DummyQuestionService';
+
+export const QuestionServiceContext = React.createContext<QuestionService>(new DummyQuestionService)
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <NavigationBar />
+      <div className="main-body">
+        <ViewQuestions></ViewQuestions>
+      </div>
+    </React.Fragment>
   );
 }
 
